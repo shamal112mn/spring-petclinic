@@ -1,4 +1,5 @@
 FROM openjdk:8-jdk-alpine
+LABEL maintainer="azatm@gmail.com"
 COPY . /myapp
 WORKDIR  /myapp
 RUN ./mvnw package && mv target/*.jar target/app.jar
